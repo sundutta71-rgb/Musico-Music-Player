@@ -35,6 +35,13 @@ nav ul li{
 }
 .container{
     min-height: 75lvh;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Varela Round', 'Smooch-Sans';
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
 }
 .bottom{
     position: sticky;
