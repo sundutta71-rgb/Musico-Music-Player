@@ -34,20 +34,23 @@ nav ul li{
     font-size: 1.3rem;
 }
 .container{
-    min-height: 75lvh;
+    min-height: 72vh;
     background-color: black;
     color: aliceblue;
     font-family: 'Varela Round', 'Smooch-Sans';
     display: flex;
-    width: 70%;
+    width: 64%;
     margin: 23px auto;
     border-radius: 12px;
+    padding: 34px;
+    background-image: url('background.jpg');
 }
 .bottom{
     position: sticky;
     height: 130px;
     background-color: black;
     color: aliceblue;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
