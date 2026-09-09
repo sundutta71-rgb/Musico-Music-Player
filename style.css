@@ -21,8 +21,12 @@ nav ul{
     background-color: black;
     color: white;
 }
+nav ul li{
+    padding: 0 12px;
+}
 .brand img{
     width: 65px;
+    padding: 0 8px;
 
 }
 .brand{
@@ -30,4 +34,24 @@ nav ul{
     align-items: center;
     font-weight: bolder;
     font-size: 1.3rem;
+}
+.container{
+    min-height: 75vh;
+}
+.bottom{
+   position: sticky;
+   height: 130px;
+   background-color: black;
+   color: white;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+#myProgressBar{
+  width: 80vw ;
+  text-align: center;
+
 }
