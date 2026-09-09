@@ -37,6 +37,9 @@ nav ul li{
 }
 .container{
     min-height: 75vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
 }
 .bottom{
    position: sticky;
@@ -50,6 +53,14 @@ nav ul li{
    flex-direction: column;
 
 }
+.icons{
+    margin-top: 14px;
+
+}
+.icons{
+    cursor: pointer;
+}
+
 #myProgressBar{
   width: 80vw ;
   text-align: center;
