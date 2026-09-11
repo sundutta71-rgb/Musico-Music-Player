@@ -72,6 +72,9 @@ nav ul li{
   text-align: center;
 
 }
+.songItemContainer{
+    margin-top: 70px;
+}
 .songItem{
   height: 50px;
   display: flex;
@@ -79,6 +82,19 @@ nav ul li{
   width: 80%;
   color: black;
   margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
 
 }
-.songItem img{}
+.songItem img{
+    width: 44px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+.timestamp{
+    margin: 0 23px;
+}
+.timestamp i{
+    cursor: pointer;
+}
