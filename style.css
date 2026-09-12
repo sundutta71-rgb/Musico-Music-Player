@@ -61,15 +61,14 @@ nav ul li{
 }
 .icons{
     margin-top: 14px;
-
-}
-.icons{
     cursor: pointer;
+
 }
 
 #myProgressBar{
   width: 80vw ;
   text-align: center;
+  cursor: pointer;
 
 }
 .songItemContainer{
@@ -94,7 +93,18 @@ nav ul li{
 }
 .timestamp{
     margin: 0 23px;
+    cursor: pointer;
 }
 .timestamp i{
     cursor: pointer;
+}
+.songInfo{
+    margin-top: 20px;
+    position: absolute;
+    left: 9vw;
+    font-family: 'Varela Round', sans-serif;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity is ease-in;
 }
