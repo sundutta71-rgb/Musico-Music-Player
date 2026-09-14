@@ -1,21 +1,33 @@
 console.log("Welcome to Musico");
-// Initialize the Variables
+
 let songIndex = 0;
-let audioElement = new Audio('1.mp3');
+let audioElement = document.createElement('audio');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 
 let songs = [
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-    {songName: "Saaiyan", filePath: "song/1.mp3", coverpath: "covers/1.jpg" },
-]
-//audioElement.play();
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+    {songName: "Saiyaan", filePath: "1.mp3", coverPath: "cover.jpg"},
+];
 
-//Listen to Events
-myProgressBar.addEventListener('timeupdate',()=>{
-    console.log('timeupdate')
-})
+audioElement.src = songs[songIndex].filePath;
+
+masterPlay.addEventListener('click', () => {
+    console.log('clicked');
+    if (audioElement.paused || audioElement.currentTime <= 0) {
+        audioElement.play()
+            .then(() => console.log('playing'))
+            .catch(err => console.log('play failed:', err));
+    } else {
+        audioElement.pause();
+    }
+});
+
+audioElement.addEventListener('timeupdate', () => {
+    console.log('timeupdate');
+    myProgressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+});
